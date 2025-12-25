@@ -1,4 +1,4 @@
-const API_URL = 'http://127.0.0.1:8000';
+const API_URL = 'https://moodtracker-1-3dmf.onrender.com';
 
 // Google Sign-In callback function
 function handleCredentialResponse(response) {

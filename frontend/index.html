@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="config.js"></script>
+    <script src="script.js" defer></script>
+    <title>Mood Tracker</title>
+</head>
+<body>
+    <!-- Header with user info/logout (shows after login) -->
+    <div class="header">
+        <h1>Mood Tracker</h1>
+        <div class="user-section" id="user-section">
+            <!-- User profile pic, name, logout button -->
+        </div>
+    </div>
+
+    <!-- Login screen (shows when NOT logged in) -->
+    <div class="login-section" id="login-section">
+        <h2>Welcome!</h2>
+        <p>Track your moods and emotions</p>
+        <div id="g_id_signin"></div>
+    </div>
+
+    <!-- App content (shows AFTER login) -->
+    <div class="app-content" id="app-content">
+        <div class="mood-form-section">
+            <h2>How are you feeling today?</h2>
+            <form id="mood-form">
+                <div class="form-group">
+                    <input type="text" id="mood-input" placeholder="Enter your mood (e.g., happy, sad, excited)" required>
+                </div>
+                <button type="submit" class="btn btn-submit">Submit Mood</button>
+            </form>
+        </div>
+        
+        <div class="mood-history-section">
+            <h3>Your Mood History</h3>
+            <div id="mood-history"></div>
+        </div>
+    </div>
+</body>
+</html>

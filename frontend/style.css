@@ -1,0 +1,380 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #082d2d 0%, #368862 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: #667eea;
+    font-size: 2rem;
+}
+
+/* User Profile Section */
+.user-section {
+    display: none;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-section.active {
+    display: flex;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #667eea;
+}
+
+.user-name {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Login Section */
+.login-section {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 80px auto;
+}
+
+.login-section.hidden {
+    display: none;
+}
+
+.login-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.login-section p {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+#g_id_signin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-google {
+    background: #18386d;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+}
+
+.btn-google:hover {
+    background: #194b33;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(100, 125, 164, 0.3);
+}
+
+.btn-logout {
+    background: #ff4757;
+    color: white;
+}
+
+.btn-logout:hover {
+    background: #ee5a6f;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #0f4431 0%, #68bb38 100%);
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* App Content */
+.app-content {
+    display: none;
+}
+
+.app-content.active {
+    display: block;
+}
+
+/* Mood Form Section */
+.mood-form-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.mood-form-section h2 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+#mood-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group input {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Mood Options */
+.mood-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.mood-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mood-option:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.mood-option input[type="radio"] {
+    display: none;
+}
+
+.mood-option input[type="radio"]:checked + label {
+    color: #667eea;
+}
+
+.mood-option.selected {
+    border-color: #667eea;
+    background: #f8f9ff;
+}
+
+.mood-icon {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+.mood-label {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Mood History Section */
+.mood-history-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mood-history-section h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#mood-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mood-item {
+    padding: 25px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.mood-item:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(102, 126, 234, 0.2);
+}
+
+.mood-item-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mood-item-icon {
+    font-size: 2rem;
+}
+
+.mood-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mood-item-mood {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.mood-item-name {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.mood-item-timestamp {
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .mood-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mood-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* Loading State */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
